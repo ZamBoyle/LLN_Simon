@@ -31,7 +31,7 @@ def PrintScore():
 	cnx = AllUsersConnection()
 	try:
 		curseur = cnx.cursor()
-		curseur.execute("select * from score")
+		curseur.execute("select * from score ORDER BY score DESC Limit 10")
 		donnees = curseur.fetchall()
 		for enregistrement in donnees:
 			#print("Idscore: ", enregistrement[0], "nom: ", enregistrement[1], "score: ", enregistrement[2])
@@ -47,7 +47,6 @@ def AddScore(_name, _score):
 	try:
 		curseur = cnx.cursor()
 		requete = f"INSERT INTO score(pseudo,  score, datescore) VALUES ('{_name}', {_score}, '{dayTime}');"
-		print(requete)
 		curseur.execute(requete)
 		cnx.commit()
 
