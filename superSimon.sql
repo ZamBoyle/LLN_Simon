@@ -1,7 +1,4 @@
 
-/* On utilise l'encodage UTF8 */
-charset utf8;
-
 DROP DATABASE IF EXISTS supersimon;
 CREATE DATABASE supersimon;
 
@@ -16,7 +13,7 @@ SET FOREIGN_KEY_CHECKS=0;
 /* Creation de la Table Genre pour les score. */
 
 
-DROP TABLE IF EXISTS 'score'; 
+DROP TABLE IF EXISTS score; 
 
 CREATE TABLE score(
     IdScore int UNSIGNED AUTO_INCREMENT PRIMARY KEY ,
