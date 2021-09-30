@@ -22,14 +22,14 @@ CREATE TABLE score(
 	datescore datetime
 	);
 
-
+/*
 INSERT INTO score(pseudo,  score, datescore)
 VALUES('simondad', 20, '2021/12/12'),
 ('simonmom', 15, '2021/12/12'), 
 ('simonson', 10, '2021/12/12'), 
 ('simonsister', 5, '2021/12/12'), 
 ('simonbaby', 1, '2021/12/12');
-
+*/
 
 select * from score;
 

@@ -35,17 +35,18 @@ def PrintScore():
 		donnees = curseur.fetchall()
 		for enregistrement in donnees:
 			#print("Idscore: ", enregistrement[0], "nom: ", enregistrement[1], "score: ", enregistrement[2])
-			print("nom:", enregistrement[1], "score: ", enregistrement[2])
+			print("date et heure: ", enregistrement[3], "nom:", enregistrement[1], "score: ", enregistrement[2])
 		curseur.close()
 		cnx.close()
 	except Exception as erreur:
 		print("Une erreur est survenue:", erreur)
 
 def AddScore(_name, _score):
+	dayTime = datetime.datetime.now() 
 	cnx = AllUsersConnection()
 	try:
 		curseur = cnx.cursor()
-		requete = f"INSERT INTO score(pseudo,  score, datescore) VALUES ('{_name}', {_score}, '2021/12/12');"
+		requete = f"INSERT INTO score(pseudo,  score, datescore) VALUES ('{_name}', {_score}, '{dayTime}');"
 		print(requete)
 		curseur.execute(requete)
 		cnx.commit()
