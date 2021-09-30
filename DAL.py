@@ -32,7 +32,8 @@ def PrintScore():
 		curseur.execute("select * from score ORDER BY score DESC Limit 10")
 		tousLesEnregistrements = curseur.fetchall()
 		for enregistrement in tousLesEnregistrements:
-			print("date et heure: ", enregistrement[3], "nom:", enregistrement[1], "score: ", enregistrement[2])
+			#print("date et heure: ", enregistrement[3], "nom:", enregistrement[1], "score: ", enregistrement[2])
+			print(f"date et heure: {enregistrement[3]} nom: {enregistrement[1]} score: {enregistrement[2]}")
 		curseur.close()
 		cnx.close()
 	except Exception as erreur:
