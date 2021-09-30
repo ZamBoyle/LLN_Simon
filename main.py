@@ -2,9 +2,18 @@ import simon.py
 
 def AllUsersConnection(): 
     try: 
-        return MC.connect(host = 'localhost', database='eqlaflix', user = 'root', password = 'g5gqwagr' )
+        return MC.connect(host = 'localhost', database='score', user = 'root', password = 'g5gqwagr' )
     except:
         try: 
-            return MC.connect(host = 'localhost', database='eqlaflix', user = 'root', password = 'python4life' )
+            return MC.connect(host = 'localhost', database='score', user = 'root', password = 'python4life' )
         except:
-            return MC.connect(host = 'localhost', database='eqlaflix', user = 'root', password = 'isaac' )
+            try: 
+            	return MC.connect(host = 'localhost', database='score', user = 'root', password = 'elochat' )
+        	except:
+				try: 
+            		return MC.connect(host = 'localhost', database='score', user = 'root', password = 'eleochat' )
+        		except:
+					try: 
+            			return MC.connect(host = 'localhost', database='score', user = 'root', password = 'Eleochat' )
+        			except:
+            			return MC.connect(host = 'localhost', database='score', user = 'root', password = 'isaac' )
