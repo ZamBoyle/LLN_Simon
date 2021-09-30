@@ -24,4 +24,3 @@ def AllUsersConnection():
 							except:
 								print("Erreur de connexion...")
 
-cnx = AllUsersConnection()
