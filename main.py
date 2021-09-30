@@ -16,4 +16,12 @@ def AllUsersConnection():
 					try: 
 						return MC.connect(host = 'localhost', database='score', user = 'root', password = 'Eleochat' )
 					except:
-						return MC.connect(host = 'localhost', database='score', user = 'root', password = 'isaac' )
+						try:
+							return MC.connect(host = 'localhost', database='score', user = 'root', password = 'isaac' )
+						except:
+							try:          
+								return MC.connect(host = 'localhost', database='score', user = 'root', password = '@Mcyber66' )
+							except:
+								print("Erreur de connexion...")
+
+cnx = AllUsersConnection()
