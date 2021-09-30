@@ -164,13 +164,10 @@ def startScreen():
 	else:
 		exit()
 
-try:
-	while True:
-		PrintScore()
-		startScreen()
-		SuperSimonEndingScreenScoreBoard(newPlayerPoint)
-		#printScoreBoard(newPlayerPoint)
-		AddScore(SimonNamePlayer, newPlayerPoint)
-		PrintScore()
-except Exception as erreur:
-	print(f"Une erreur est survenue:{erreur}")
+while True:
+	PrintScore()
+	startScreen()
+	SuperSimonEndingScreenScoreBoard(newPlayerPoint)
+	#printScoreBoard(newPlayerPoint)
+	AddScore(SimonNamePlayer, newPlayerPoint)
+	PrintScore()

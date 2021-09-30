@@ -21,7 +21,7 @@ def GetConnection():
 							return MC.connect(host = 'localhost', database='supersimon', user = 'root', password = 'isaac' )
 						except:
 							try:          
-								return MC.connect(host = 'localhost', database='supersimon', user = 'root', password = '@Mcyber66s' )
+								return MC.connect(host = 'localhost', database='supersimon', user = 'root', password = '@Mcyber66' )
 							except MC.Error as error:
 								raise Exception(f"Connexion à la DB:{error}")
 
@@ -36,8 +36,7 @@ def PrintScore():
 		curseur.close()
 		cnx.close()
 	except Exception as erreur:
-		#print("Une erreur est survenue:", erreur)
-		raise Exception(erreur)
+		print("Une erreur est survenue:", erreur)
 
 def AddScore(_name, _score):
 	try:
@@ -51,5 +50,4 @@ def AddScore(_name, _score):
 		curseur.close()
 		cnx.close()
 	except Exception as erreur:
-		#print("Une erreur est survenue:", erreur)
-		raise Exception(erreur)
+		print("Une erreur est survenue:", erreur)
