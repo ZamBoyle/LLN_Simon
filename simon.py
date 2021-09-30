@@ -1,3 +1,5 @@
+import mysql.connector as MC
+import datetime
 import random
 import sys
 import os
