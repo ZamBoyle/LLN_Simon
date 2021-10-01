@@ -170,4 +170,3 @@ while True:
 	SuperSimonEndingScreenScoreBoard(newPlayerPoint)
 	#printScoreBoard(newPlayerPoint)
 	AddScore(SimonNamePlayer, newPlayerPoint)
-	PrintScore()
