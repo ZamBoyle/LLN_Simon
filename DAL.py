@@ -40,8 +40,7 @@ def GetConnection():
 								raise Exception(f"Connexion à la DB:{error}")
 
 def GetScores():
-	"""Fonction qui affiche les scores stockés en DB"""
-	tousLesEnregistrements = None
+	"""Fonction qui retourne les scores stockés en DB"""
 	try:
 		#On reçoit un object de type MySQLConnection de la fonction GetConnection()
 		cnx = GetConnection()
