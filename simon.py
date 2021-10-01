@@ -165,10 +165,10 @@ def startScreen():
 		exit()
 
 def PrintScore():
-	#On va parcourir tous nos enregistrements.
-	#L'enregistrement en cours est stocké dans la variable enregistrement
 	enregistrements =  GetScores()
 	if enregistrements != None and len(enregistrements)>0:
+ 	#On va parcourir tous nos enregistrements.
+	#L'enregistrement en cours est stocké dans la variable enregistrement
 		for enregistrement in enregistrements:
 			#On affiche le résultat. On prend dans le tableau, le champ à l'indice 1 (nom), l'indice 2 (score), l'indice 3 (date)
 			print(f"date et heure: {enregistrement[3]} nom: {enregistrement[1]} score: {enregistrement[2]}")
