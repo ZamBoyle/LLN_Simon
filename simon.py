@@ -165,6 +165,7 @@ def startScreen():
 		exit()
 
 def PrintScore():
+	#On récupère les scores via la fonction GetScores() de DAL.py    
 	enregistrements =  GetScores()
 	if enregistrements != None and len(enregistrements)>0:
  	#On va parcourir tous nos enregistrements.
