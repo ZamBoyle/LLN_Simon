@@ -39,8 +39,9 @@ def GetConnection():
 							except MC.Error as error:
 								raise Exception(f"Connexion à la DB:{error}")
 
-def PrintScore():
+def GetScores():
 	"""Fonction qui affiche les scores stockés en DB"""
+	tousLesEnregistrements = None
 	try:
 		#On reçoit un object de type MySQLConnection de la fonction GetConnection()
 		cnx = GetConnection()
@@ -51,15 +52,11 @@ def PrintScore():
 		curseur.execute("select * from score ORDER BY score DESC Limit 10")
   		#On récupère tous les enregistrement (fetchall) dans la variables tousLesEnregistrements
 		tousLesEnregistrements = curseur.fetchall()
-  		#On va parcourir tous nos enregistrements.
-  		#L'enregistrement en cours est stocké dans la variable enregistrement
-		for enregistrement in tousLesEnregistrements:
-			#On affiche le résultat. On prend dans le tableau, le champ à l'indice 1 (nom), l'indice 2 (score), l'indice 3 (date)
-			print(f"date et heure: {enregistrement[3]} nom: {enregistrement[1]} score: {enregistrement[2]}")
   		#On ferme le curseur
 		curseur.close()
   		#On ferme la connection
 		cnx.close()
+		return tousLesEnregistrements
 	except Exception as erreur:
 		print("Une erreur est survenue:", erreur)
 
